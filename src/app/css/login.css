@@ -1,0 +1,8 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(to right, rgba(235, 30, 215, 0.5), rgba(226, 227, 232, 0.2)), url("https://www.enyoi.co/wp-content/uploads/2023/01/login-moodle-enyoi.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
