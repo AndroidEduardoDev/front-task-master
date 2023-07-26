@@ -1,1 +1,2 @@
-npm i react-router-dom@latest
+mi primer comando para que todo funcione es
+npm i --force
