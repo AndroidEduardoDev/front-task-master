@@ -23,7 +23,7 @@ export default function HomeComponent() {
     }, [])
 
     const results = tasks.map((task) =>
-        <ContainerTask task={task} />
+        <ContainerTask key={task.id} task={task} />
     );
 
     return (
