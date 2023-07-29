@@ -1,11 +1,10 @@
 import "bootstrap/dist/css/bootstrap.css"
+import Link from "next/link";
 import { useEffect } from "react";
 
 
-export default function ContainerTask(props: { task: any }) {
-    useEffect(() => {
-        require("bootstrap/dist/js/bootstrap.bundle.js");
-    }, []);
+export default function ContainerTask(props: { task?: any }) {
+    useEffect(() => { require("bootstrap/dist/js/bootstrap.bundle.js"); }, []);
 
     return (
         <div className="col-md-3" >
@@ -15,6 +14,8 @@ export default function ContainerTask(props: { task: any }) {
                     <button type="button" className="btn btn-primary form-control" data-bs-toggle="modal" data-bs-target={"#task" + props.task.id}                   >
                         Detail task
                     </button>
+                    <br />
+                    <Link className="btn btn-success form-control" href={"/task/" + props.task.id}> Edit </Link>
                 </div>
 
                 <div className="d-flex justify-content-center align-items-center">

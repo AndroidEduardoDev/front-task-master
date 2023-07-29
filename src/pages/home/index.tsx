@@ -10,7 +10,8 @@ import Link from "next/link"
 import { httpGet } from "@/app/core/http-request-contract"
 import ContainerTask from "@/app/components/container-task/container.task"
 
-export const taskModel = [{ id: 1, title: "", description: "", datetime: "", priority: "" }]
+export const taskModelSingle = { id: 1, title: "", description: "", datetime: "", priority: "" }
+export const taskModel = [taskModelSingle]
 
 export default function HomeComponent() {
     const [tasks, setTask] = useState(taskModel)
@@ -29,7 +30,7 @@ export default function HomeComponent() {
     return (
         <div className="container-fluid login-bg">
             <div className="row main-wrapper">
-                <div className="container-primary col-md-4 offset-md-8">
+                <div className="container-primary col-md-8 offset-md-2">
                     <div className="row">
                         <div className="jumbotron vertical-center">
                             <div className="container">
@@ -42,12 +43,8 @@ export default function HomeComponent() {
                                         loop: true,
                                         autoplay: true,
                                         animationData: animationEmpty,
-                                        rendererSettings: {
-                                            preserveAspectRatio: 'xMidYMid slice'
-                                        }
-                                    }}
-                                        height={400}
-                                        width={400} />
+                                        rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
+                                    }} height={400} width={400} />
                                 )
                                 }
 
